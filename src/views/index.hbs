@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{{!-- add header.hbs --}}
+{{> header}}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>{{title}}</title>
-</head>
+<h1>
+    {{@title}}
+</h1>
+{{> nav}}
+<p>
+    {{message}}
+</p>
+{{!-- disblay books --}}
+<ul>
+    {{#each books}}
+    <li id="bk-{{id}}">{{upper title}} by: {{author}} ({{pages}}): {{curr price}}</li>
+    {{/each}}
+</ul>
 
-<body>
-    <h1>
-        {{title}}
-    </h1>
-    <p>
-        {{message}}
-    </p>
-    {{!-- disblay books --}}
-    <ul>
-        {{#each books}}
-        <li id="bk-{{id}}">{{title}} ({{pages}})</li>
-        {{/each}}
-    </ul>
-</body>
-
-</html>
+{{!-- add footer.hbs --}}
+{{> footer}}

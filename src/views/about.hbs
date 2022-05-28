@@ -1,0 +1,18 @@
+{{> header}}
+
+<h1>
+    {{@title}}
+</h1>
+{{> nav}}
+<p>
+    {{message}}
+</p>
+{{!-- disblay count --}}
+<p>
+    {{#if count}}
+        There are {{count}} visits
+    {{else}}
+        No users
+    {{/if}}
+</p>
+{{> footer}}
